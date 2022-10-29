@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+    Home
+{% endblock title %}
+    
+
+{% block content %}
+<div class="home">
+    <div class="container">
+        <div class="row mt-5 ">
+            <div class="col-sm-8 hero-col">
+                <img src="{{url_for('static', filename='images/carousel-images/c-2.jpg')}}" alt="">
+            </div>
+            <div class="col-sm-4 shadow p-3   rounded">
+                <div class="title">
+                    <h3>Login</h3>
+                </div>
+                <form> 
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                     
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                  </form>
+                  <div class="bottom-text">
+                    <div class="create-admin-account mt-3">
+                        Don't have an account?
+                        <a class="link"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#" >Click here</a>
+                    </div>
+                  </div>
+                  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Create account as:
+          <a href="">Generate report</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">As admin</button>
+          <button type="button" class="btn btn-primary">User</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    
